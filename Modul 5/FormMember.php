@@ -45,11 +45,11 @@ if (isset($_GET['id_member'])) {
                         <form action="" method="post">
                             <div class="form-group">
                                 <label for="nama_member">Nama Member</label>
-                                <input type="text" class="form-control" name="nama_member" id="nama_member" <?php echo (isset($_GET['id_member'])) ?  "value = " . $row[0]["nama_member"] . "" : "value = '' "; ?> placeholder="Nama Member" required>
+                                <input type="text" class="form-control" name="nama_member" id="nama_member" <?php echo (isset($_GET['id_member'])) ?  "value = '" . $row[0]["nama_member"] . "'" : "value = '' "; ?> placeholder="Nama Member" required>
                             </div>
                             <div class="form-group">
                                 <label for="nomor_member">Nomor Member</label>
-                                <input type="text" class="form-control" name="nomor_member" id="nomor_member" <?php echo (isset($_GET['id_member']) ) ?  "value = " . $row[0]["nomor_member"] . "" : "value = '' "; ?> placeholder="Nomor Member" required>
+                                <input type="text" class="form-control" name="nomor_member" id="nomor_member" <?php echo (isset($_GET['id_member']) ) ?  "value = '" . $row[0]["nomor_member"] . "'" : "value = '' "; ?> placeholder="Nomor Member" required>
                             </div>
 
                             <div class="form-group">

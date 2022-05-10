@@ -45,20 +45,20 @@ if (isset($_GET['id_buku'])) {
                         <form action="" method="post">
                             <div class="form-group">
                                 <label for="judul_buku">Judul Buku</label>
-                                <input type="text" class="form-control" name="judul_buku" id="judul_buku" <?php echo (isset($_GET['id_buku'])) ?  "value = " . $row[0]["judul_buku"] . "" : "value = '' "; ?> placeholder="Masukkan Judul Buku" required>
+                                <input type="text" class="form-control" name="judul_buku" id="judul_buku" <?php echo (isset($_GET['id_buku'])) ?  "value = '" . $row[0]["judul_buku"] . "'" : "value = '' "; ?> placeholder="Masukkan Judul Buku" required>
                             </div>
                             <div class="form-group">
                                 <label for="penulis">Penulis Buku</label>
-                                <input type="text" class="form-control" name="penulis" id="penulis" <?php echo (isset($_GET['id_buku']) ) ?  "value = " . $row[0]["penulis"] . "" : "value = '' "; ?> placeholder="Masukkan Penulis Buku" required>
+                                <input type="text" class="form-control" name="penulis" id="penulis" <?php echo (isset($_GET['id_buku']) ) ?  "value = '" . $row[0]["penulis"] . "'" : "value = '' "; ?> placeholder="Masukkan Penulis Buku" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="penerbit">Penerbit</label>
-                                <input class="form-control" name="penerbit" id="penerbit" <?php echo (isset($_GET['id_buku']) ) ?  "value = " . $row[0]["penerbit"] . "" : "value = '' "; ?> placeholder="Masukkan Penerbit Buku" required>
+                                <input class="form-control" name="penerbit" id="penerbit" <?php echo (isset($_GET['id_buku']) ) ?  "value = '" . $row[0]["penerbit"] . "'" : "value = '' "; ?> placeholder="Masukkan Penerbit Buku" required>
                             </div>
                             <div class="form-group">
                                 <label for="tahun_terbit">Tahun Terbit</label>
-                                <input type="number" class="form-control" name="tahun_terbit" id="tahun_terbit" <?php echo (isset($_GET['id_buku'])) ?  "value = " . $row[0]["tahun_terbit"] . "" : "value = '' "; ?> placeholder="Tanggal Terakhir Bayar" required>
+                                <input type="number" class="form-control" name="tahun_terbit" id="tahun_terbit" <?php echo (isset($_GET['id_buku'])) ?  "value = '" . $row[0]["tahun_terbit"] . "'" : "value = '' "; ?> placeholder="Tanggal Terakhir Bayar" required>
                             </div>
                             <?php
                             if (isset($_GET['id_buku'])) {
