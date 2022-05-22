@@ -18,16 +18,16 @@ class Model
         return $result;
     }
 
-    public function setMember($nama, $nomor, $alamat, $tgl_terakhir_bayar)
+    public function setMember($nama, $nomor, $password, $alamat, $tgl_terakhir_bayar)
     {
-        $sql = "INSERT INTO member (nama_member, nomor_member, alamat, tgl_mendaftar, tgl_terakhir_bayar) VALUES ('$nama', '$nomor', '$alamat', now(), '$tgl_terakhir_bayar')";
+        $sql = "INSERT INTO member (nama_member, nomor_member, password, alamat, tgl_mendaftar, tgl_terakhir_bayar) VALUES ('$nama', '$nomor', '$password', '$alamat', now(), '$tgl_terakhir_bayar')";
         $result = mysqli_query($GLOBALS['koneksi'], $sql);
         return $result;
     }
 
-    public function editMember($id, $nama, $nomor, $alamat, $tgl_terakhir_bayar)
+    public function editMember($id, $nama, $nomor, $password, $alamat, $tgl_terakhir_bayar)
     {
-        $sql = "UPDATE member SET nama_member = '$nama', nomor_member = '$nomor', alamat = '$alamat', tgl_terakhir_bayar = '$tgl_terakhir_bayar' WHERE id_member = '$id'";
+        $sql = "UPDATE member SET nama_member = '$nama', nomor_member = '$nomor',password = '$password', alamat = '$alamat', tgl_terakhir_bayar = '$tgl_terakhir_bayar' WHERE id_member = '$id'";
         $result = mysqli_query($GLOBALS['koneksi'], $sql);
         return $result;
     }

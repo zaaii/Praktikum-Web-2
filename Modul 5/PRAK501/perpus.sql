@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 06 Bulan Mei 2022 pada 14.14
+-- Waktu pembuatan: 22 Bulan Mei 2022 pada 06.56
 -- Versi server: 10.4.22-MariaDB
 -- Versi PHP: 8.1.2
 
@@ -53,6 +53,7 @@ CREATE TABLE `member` (
   `id_member` int(11) NOT NULL,
   `nama_member` varchar(250) DEFAULT NULL,
   `nomor_member` varchar(15) DEFAULT NULL,
+  `password` varchar(45) NOT NULL,
   `alamat` text DEFAULT NULL,
   `tgl_mendaftar` datetime DEFAULT NULL,
   `tgl_terakhir_bayar` date DEFAULT NULL
@@ -62,9 +63,10 @@ CREATE TABLE `member` (
 -- Dumping data untuk tabel `member`
 --
 
-INSERT INTO `member` (`id_member`, `nama_member`, `nomor_member`, `alamat`, `tgl_mendaftar`, `tgl_terakhir_bayar`) VALUES
-(1, 'UwU', '221009', 'test1', '2022-04-30 11:31:37', '2022-05-07'),
-(2, 'wew', '02218140', 'oawopdadjawd', '2022-04-30 11:31:37', '2022-05-06');
+INSERT INTO `member` (`id_member`, `nama_member`, `nomor_member`, `password`, `alamat`, `tgl_mendaftar`, `tgl_terakhir_bayar`) VALUES
+(1, 'UwU', '20108173', 'pass1234', 'test1', '2022-04-30 11:31:37', '2022-05-07'),
+(2, 'wew', '20108172', 'punya123', 'gang', '2022-04-30 11:31:37', '2022-05-06'),
+(37, 'OmO', 'A1-221133', 'member22', 'deded', '2022-05-22 12:52:05', '2022-05-25');
 
 -- --------------------------------------------------------
 
@@ -83,8 +85,7 @@ CREATE TABLE `peminjaman` (
 --
 
 INSERT INTO `peminjaman` (`id_peminjaman`, `tgl_peminjaman`, `tgl_kembali`) VALUES
-(1, '2022-05-09', '2022-05-10'),
-(4, '2022-05-06', '2022-05-13');
+(1, '2022-05-09', '2022-05-10');
 
 --
 -- Indexes for dumped tables
@@ -116,13 +117,13 @@ ALTER TABLE `peminjaman`
 -- AUTO_INCREMENT untuk tabel `buku`
 --
 ALTER TABLE `buku`
-  MODIFY `id_buku` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_buku` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `member`
 --
 ALTER TABLE `member`
-  MODIFY `id_member` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id_member` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT untuk tabel `peminjaman`
