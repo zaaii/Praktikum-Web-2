@@ -11,6 +11,8 @@ if (isset($_GET['id_buku'])) {
     $row = mysqli_fetch_all($result, MYSQLI_ASSOC);
 }
 
+session_start();
+if (isset($_SESSION['nomor_member'])) :
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -93,3 +95,8 @@ if (isset($_GET['id_buku'])) {
                         </div>
 </body>
 </html>
+<?php
+else :
+    header("Location: ErrorPage.php");
+endif;
+?>

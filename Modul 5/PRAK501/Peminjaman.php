@@ -18,6 +18,9 @@ if (isset($_GET['id_peminjman'])) {
     $peminjaman->editPeminjaman($id, $tglPinjam, $tglKembali);
     header("Location: Peminjaman.php");
 }
+
+session_start();
+if (isset($_SESSION['nomor_member'])) :
 ?>
 
 <!DOCTYPE html>
@@ -37,7 +40,7 @@ if (isset($_GET['id_peminjman'])) {
                 <h1>Peminjaman Buku</h1>
                 <hr>
                 <h3>Daftar Peminjaman</h3></br>
-                <a class="btn btn-info my-1" href='index.php'"><i class="fa fa-home"></i> Beranda</a>
+                <a class="btn btn-info my-1" href='Dashboard.php'"><i class="fa fa-home"></i> Beranda</a>
                 <a class="btn btn-success my-1" href='FormPeminjaman.php'"><i class="fa fa-book-reader"></i> Tambah Data</a>
                 <table class="table table-striped">
             <thead>
@@ -76,3 +79,8 @@ if (isset($_GET['id_peminjman'])) {
     </div>
 </body>
 </html>
+<?php
+else :
+    header("Location: ErrorPage.php");
+endif;
+?>
