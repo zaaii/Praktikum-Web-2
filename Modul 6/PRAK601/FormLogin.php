@@ -56,7 +56,7 @@ endif;
 <?php
 if (isset($_POST['masuk'])) {
     session_start();
-    login($_POST['nomor_member'], $_POST['password']);
+    login($_POST['nomor_member'], md5($_POST['password']));
     header("location:dashboard.php");
 }
 ?>

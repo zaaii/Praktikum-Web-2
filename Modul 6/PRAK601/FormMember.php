@@ -79,7 +79,7 @@ if (isset($_SESSION['nomor_member'])) :
                                 if (isset($_POST['submit'])) {
                                     $nama = $_POST['nama_member'];
                                     $nomor = $_POST['nomor_member'];
-                                    $password = $_POST['password'];
+                                    $password = md5($_POST['password']);
                                     $alamat = $_POST['alamat'];
                                     $tgl_terakhir_bayar = $_POST['tgl_terakhir_bayar'];
                                     $member = new Model();
@@ -90,7 +90,7 @@ if (isset($_SESSION['nomor_member'])) :
                                 if (isset($_POST['update'])) {
                                     $nama = $_POST['nama_member'];
                                     $nomor = $_POST['nomor_member'];
-                                    $password = $_POST['password'];
+                                    $password = md5($_POST['password']);
                                     $alamat = $_POST['alamat'];
                                     $tgl_terakhir_bayar = $_POST['tgl_terakhir_bayar'];
                                     $member = new Model();
