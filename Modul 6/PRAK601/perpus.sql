@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 22 Bulan Mei 2022 pada 06.56
+-- Waktu pembuatan: 29 Bulan Mei 2022 pada 10.38
 -- Versi server: 10.4.22-MariaDB
 -- Versi PHP: 8.1.2
 
@@ -64,9 +64,10 @@ CREATE TABLE `member` (
 --
 
 INSERT INTO `member` (`id_member`, `nama_member`, `nomor_member`, `password`, `alamat`, `tgl_mendaftar`, `tgl_terakhir_bayar`) VALUES
-(1, 'UwU', '20108173', 'pass1234', 'test1', '2022-04-30 11:31:37', '2022-05-07'),
+(1, 'UwU', '20108173', 'b4af804009cb036a4ccdc33431ef9ac9', 'test1', '2022-04-30 11:31:37', '2022-05-07'),
 (2, 'wew', '20108172', 'punya123', 'gang', '2022-04-30 11:31:37', '2022-05-06'),
-(37, 'OmO', 'A1-221133', 'member22', 'deded', '2022-05-22 12:52:05', '2022-05-25');
+(37, 'OmO', 'A1-221133', 'member22', 'deded', '2022-05-22 12:52:05', '2022-05-25'),
+(38, 'testmd5', '20108171', '917e92199cde751f08b388e9ffe2dae6', 'asasa', '2022-05-29 16:33:03', '2022-05-27');
 
 -- --------------------------------------------------------
 
@@ -123,7 +124,7 @@ ALTER TABLE `buku`
 -- AUTO_INCREMENT untuk tabel `member`
 --
 ALTER TABLE `member`
-  MODIFY `id_member` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id_member` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT untuk tabel `peminjaman`
